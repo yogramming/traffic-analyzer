@@ -76,7 +76,6 @@ traffic-analyzer-k8s/
 
 ### Build locally
 
-```bash
 docker build -t traffic-analyzer .
 docker run -p 5000:5000 traffic-analyzer
 
@@ -94,9 +93,9 @@ pushes to DockerHub →
 updates K8s repo →
 ArgoCD deploys
 🔐 Jenkins Credentials
-ID	Purpose
-dockerhub-creds	Push Docker images
-github-creds	Update K8s repo
+ID Purpose
+dockerhub-creds Push Docker images
+github-creds Update K8s repo
 ☸️ Kubernetes Deployment
 Deployment with 2 replicas
 Uses versioned Docker images
@@ -137,14 +136,14 @@ Rolling updates (zero downtime)
 Old pods terminate after new pods are ready
 🌐 Automation
 Jenkins Trigger
-Poll SCM (H/2 * * * *)
+Poll SCM (H/2 \* \* \* \*)
 Checks GitHub every ~2 minutes
 ⚠️ Common Issues & Fixes
-Issue	Cause	Fix
-ImagePullBackOff	Image not pushed	Push to DockerHub
-Git push fails	Token permissions	Use PAT with write access
-ArgoCD not deploying	Auto-sync disabled	Enable auto-sync
-Jenkins not triggering	No trigger configured	Enable Poll SCM
+Issue Cause Fix
+ImagePullBackOff Image not pushed Push to DockerHub
+Git push fails Token permissions Use PAT with write access
+ArgoCD not deploying Auto-sync disabled Enable auto-sync
+Jenkins not triggering No trigger configured Enable Poll SCM
 📈 Future Improvements
 Prometheus + Grafana dashboards
 Horizontal Pod Autoscaler (HPA)
@@ -169,4 +168,7 @@ Built as a hands-on DevOps learning project focused on real-world workflows.
 🚀 Final Note
 
 This is not just a demo — it reflects how modern cloud-native systems are built and deployed in production.
+
+```
+
 ```
