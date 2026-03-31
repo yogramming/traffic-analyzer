@@ -35,7 +35,7 @@ pipeline {
                 git clone https://github.com/yogramming/traffic-analyzer-k8s.git
                 cd traffic-analyzer-k8s
 
-                sed -i "s|image: .*|image: yogramming/traffic-analyzer:${BUILD_NUMBER}|" deployment.yaml
+                sed -i "s|image: .*|image: yogramming/traffic-analyzer:${BUILD_NUMBER}|" deployment.yml
 
                 git commit -am "Update image to ${BUILD_NUMBER}"
                 git push
