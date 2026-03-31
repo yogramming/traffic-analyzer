@@ -32,6 +32,7 @@ pipeline {
         stage('Update K8s Repo') {
             steps {
                 sh '''
+                rm -rf traffic-analyzer-k8s
                 git clone https://github.com/yogramming/traffic-analyzer-k8s.git
                 cd traffic-analyzer-k8s
 
