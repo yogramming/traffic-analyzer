@@ -36,6 +36,9 @@ pipeline {
                 git clone https://github.com/yogramming/traffic-analyzer-k8s.git
                 cd traffic-analyzer-k8s
 
+                git config user.name "jenkins"
+                git config user.email "jenkins@local"
+
                 sed -i "s|image: .*|image: yogramming/traffic-analyzer:${BUILD_NUMBER}|" deployment.yml
 
                 git commit -am "Update image to ${BUILD_NUMBER}"
