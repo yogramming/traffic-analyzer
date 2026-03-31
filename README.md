@@ -79,6 +79,7 @@ traffic-analyzer-k8s/
 ```bash
 docker build -t traffic-analyzer .
 docker run -p 5000:5000 traffic-analyzer
+
 ⚙️ Jenkins Pipeline
 Stages
 Build Image
