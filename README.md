@@ -1,4 +1,4 @@
-# 🚀 Traffic Analyzer CI/CD + GitOps Project
+# Traffic Analyzer CI/CD + GitOps Project
 
 ## 📌 Overview
 
@@ -15,7 +15,7 @@ The application is a **Traffic Analyzer API** that tracks incoming requests and 
 
 ---
 
-## 🧠 Architecture
+## Architecture
 
 Developer (Git Push)
 ↓
@@ -35,7 +35,7 @@ Running Application
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 
 ### 🔹 App Repository (`traffic-analyzer`)
 
@@ -79,6 +79,8 @@ traffic-analyzer-k8s/
 ```bash
 docker build -t traffic-analyzer .
 docker run -p 5000:5000 traffic-analyzer
+
+---
 
 ⚙️ Jenkins Pipeline
 Stages
